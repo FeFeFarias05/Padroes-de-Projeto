@@ -32,4 +32,15 @@ public class CodificadorSimples implements Codificador {
         
         return encoded.toString();
     }
+
+    public boolean contemNumero(String str) {
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;  
+            }
+        }
+        return false;  
+    }
+
+
 }
