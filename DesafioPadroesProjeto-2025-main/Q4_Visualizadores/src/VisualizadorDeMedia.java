@@ -7,14 +7,11 @@ public class VisualizadorDeMedia {
         this.valores = valores;
     }
 
-    public void defineValores(List<Integer> valores){
+    public void atualizar(List<Integer> valores) {
         this.valores = valores;
+        exibeMedia();
     }
-
-    public void acrescentaValor(Integer valor){
-        this.valores.add(valor);
-    }
-
+   
     public void exibeMedia(){
         double media = valores.stream()
             .mapToInt(Integer::intValue)
